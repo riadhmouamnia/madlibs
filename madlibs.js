@@ -40,3 +40,4 @@ function parseStory(rawStory) {
 getRawStory().then(parseStory).then((processedStory) => {
   console.log(processedStory);
 });
+console.log("hello i'm testing")
