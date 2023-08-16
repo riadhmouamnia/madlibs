@@ -31,20 +31,17 @@ function parseStory(rawStory) {
   const storyWords = rawStory.split(" ");
   //checking for words with regex pattern
   const wordPattern = /\[.]/gi;
-
   // creeate new object of words in array
   const parsedStory = storyWords.map((word) => {
-    //strips off the matched pattern from the word [noun]
+    //strips off the matched pattern from the word ex: noun[n] => noun
     const singleWord = word.replace(wordPattern, "");
-    console.log({ word, singleWord });
     // grab the matched word
     let match = word.match(wordPattern);
-    console.log("match: ", match);
     // check if there is a match and create a new object
     if (!match) {
       return { word: singleWord };
     }
-    const pos = match[0];
+    const pos = match[0]; // ["[n]"]
     if (pos === "[n]") {
       return { word: singleWord, pos: "noun" };
     } else if (pos === "[v]") {
