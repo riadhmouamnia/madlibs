@@ -51,18 +51,6 @@ button {
   margin-top: 1.5rem;
 }
 
-.edit-input {
-  
-}
-
-.input-text-preview {
-  background-color: white;
-}
-
-.input-text-preview-change {
-  background-color: yellow;
-}
-
 @media screen and (max-width: 920px) {
   .landing-container {
     padding: 0 1rem;
