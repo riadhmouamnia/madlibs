@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "fullname": "Riadh Mouamnia",
+    "image": "./assets//riadh.png",
+    "description": "Re:coded | Student",
+    "github": "https://github.com/riadhmouamnia",
+    "linkedin": "https://www.linkedin.com/in/riadh-mouamnia"
+  },
+  {
+    "id": 2,
+    "fullname": "Mohamed TCHOKETCH",
+    "image": "./assets//mohamed.png",
+    "description": "Re:coded | Student",
+    "github": "https://github.com/mohamed70601",
+    "linkedin": "https://www.linkedin.com/"
+  },
+  {
+    "id": 3,
+    "fullname": "Imad Eddine KETTAF",
+    "image": "./assets//imad.png",
+    "description": "Re:coded | Student",
+    "github": "https://github.com/breezyback",
+    "linkedin": "https://www.linkedin.com/in/imad-eddine-kettaf"
+  },
+  {
+    "id": 4,
+    "fullname": "Hadia Djadallah",
+    "image": "./assets//hadia.png",
+    "description": "Re:coded | Student",
+    "github": "https://github.com/liliumorion",
+    "linkedin": "https://www.linkedin.com/in/hadia-djadallah"
+  },
+  {
+    "id": 5,
+    "fullname": "Sara BEGACHE",
+    "image": "./assets//sara.png",
+    "description": "Re:coded | Student",
+    "github": "https://github.com/SaraBegache",
+    "linkedin": "https://www.linkedin.com/in/sara-begache"
+  }
+  
+]
