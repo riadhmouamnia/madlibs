@@ -90,7 +90,7 @@ function createPos(word, previewContainer, editContainer) {
     } else {
       input.classList.remove("filled");
       output.classList.remove("filled");
-      output.innerText = word.pos;
+      output.innerText = `[${word.pos}]`;
     }
   });
 }
@@ -110,6 +110,8 @@ function renderStoryToDOM(processedStory) {
   });
 
   const inputFields = document.querySelectorAll("input");
+  const outputs = document.querySelectorAll("mark");
+  const clearButton = document.querySelector("#clearBtn");
   inputFields.forEach((input, i) => {
     input.addEventListener("keypress", (e) => {
       if (e.key === "Enter") {
@@ -118,7 +120,16 @@ function renderStoryToDOM(processedStory) {
       }
     });
   });
-}
+  
+  clearButton.addEventListener('click', () => {
+    for(let i=0; i<inputFields.length; i++) {
+      inputFields[i].value = "";
+      outputs[i].innerText = inputFields[i].placeholder;
+      inputFields[i].classList.remove("filled");
+      outputs[i].classList.remove("filled");
+    }
+  })  
+}   
 
 getRawStory()
   .then(parseStory)
