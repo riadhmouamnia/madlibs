@@ -185,9 +185,13 @@ button:hover {
   box-shadow: 3px 3px 10px var(--shadow);
 }
 
-.action {
+.actionBtns {
   width: 100%;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
 input,
@@ -248,6 +252,31 @@ span {
   background: var(--primary);
 }
 /*End of scrollbar styling*/
+
+/* Confetti */
+
+.open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  transition: all 0.5s;
+}
+
+.close {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+  transition: all 0.5s;
+  display: none;
+}
 
 /*About page*/
 #about {
