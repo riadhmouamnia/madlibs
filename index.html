@@ -1,69 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>madlibz</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
 
-  <body>
-    <div class="splash">
-      <div class="splash-content">
-        <img src="./assets/logo.png" alt="logo" />
-        <h1>Welcome to The Bug Slayers realm.</h1>
-      </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>madlibz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <main class="landing-container">
+    <div class="instructions">
+      <h1>Welcome to MadLibs Adventure!</h1>
+      <p>
+        Unleash your creativity with our interactive MadLibs game. Fill in the
+        blanks with nouns, verbs, and adjectives to create hilarious stories.
+      </p>
+      <h2>How to Play:</h2>
+      <ol>
+        <li>
+          Type in different nouns, verbs, and adjectives in the input fields
+          on the right.
+        </li>
+        <li>As you type, the story on the left will automatically update.</li>
+        <li>Watch your customized story come to life!</li>
+      </ol>
+      <a href="#game"><button>Get Started!</button></a>
     </div>
-    <main class="landing-container">
-      <div class="instructions">
-        <h1>Welcome to MadLibs Adventure!</h1>
-        <p>
-          Unleash your creativity with our interactive MadLibs game. Fill in the
-          blanks with nouns, verbs, and adjectives to create hilarious stories.
-        </p>
-        <h2>How to Play:</h2>
-        <ol>
-          <li>
-            Type in different nouns, verbs, and adjectives in the input fields
-            on the right.
-          </li>
-          <li>As you type, the story on the left will automatically update.</li>
-          <li>Watch your customized story come to life!</li>
-        </ol>
-        <a href="#game"><button>Get Started!</button></a>
-      </div>
-      <div class="illustration">
-        <img src="assets/illustration.png" alt="Illustration" />
-      </div>
-    </main>
-    <article id="game">
-      <canvas id="my-canvas" class="close"></canvas>
-      <div class="story">
-        <div class="madLibsEdit"></div>
-        <div class="madLibsPreview"></div>
-      </div>
-      <div class="actionBtns">
-        <button id="clearBtn">Clear all</button>
-        <button id="endBtn">The end</button>
-      </div>
-    </article>
-    <section id="about"></section>
+    <div class="illustration">
+      <img src="assets/illustration.png" alt="Illustration" />
+    </div>
+  </main>
+  <article id="game">
+    <canvas id="my-canvas" class="close"></canvas>
+    <div class="story">
+      <div class="madLibsEdit"></div>
+      <div class="madLibsPreview"></div>
+    </div>
+    <div class="actionBtns">
+      <button id="clearBtn">Clear all</button>
+      <button id="endBtn">The end</button>
+    </div>
+  </article>
+  <section id="about"></section>
 
-    <script src="index.min.js"></script>
-    <script src="confetti.js"></script>
-    <script src="do-not-touch.js"></script>
-    <script src="madlibs.js"></script>
-    <script src="about.js"></script>
-  </body>
+  <script src="splash.js"></script>
+  <script src="index.min.js"></script>
+  <script src="confetti.js"></script>
+  <script src="do-not-touch.js"></script>
+  <script src="madlibs.js"></script>
+  <script src="about.js"></script>
+</body>
+
 </html>
