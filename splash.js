@@ -13,6 +13,8 @@ content.appendChild(splashHeading);
 splash.appendChild(content);
 body.prepend(splash);
 
-setTimeout(() => {
-  splash.classList.add("display-none");
-}, 2000);
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    splash.classList.add("display-none");
+  }, 2000);
+});

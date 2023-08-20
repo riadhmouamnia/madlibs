@@ -1,4 +1,4 @@
- // creating the parsing function.
+// creating the parsing function.
 function parseStory(rawStory) {
   //create array from raw story
   const storyWords = rawStory.split(" ");
@@ -38,7 +38,7 @@ function createPunctuationText(word, previewContainer, editContainer) {
 }
 
 function createPlainText(word, previewContainer, editContainer) {
-  // create element for the regular words text 
+  // create element for the regular words text
   const spanPreview = document.createElement("span");
   const spanEdit = document.createElement("span");
   spanPreview.innerText = ` ${word.word} `;
@@ -54,7 +54,7 @@ function createPos(word, previewContainer, editContainer) {
   preWhiteSpace.innerText = " ";
   postWhiteSpace.innerText = " ";
 
-  // create input element and its attributes 
+  // create input element and its attributes
   const input = document.createElement("input");
   input.setAttribute("maxlength", "20");
   input.setAttribute("type", "text");
@@ -63,7 +63,7 @@ function createPos(word, previewContainer, editContainer) {
   const output = document.createElement("mark");
   output.innerText = `[${word.word}]`;
 
-  // append input to the edit container 
+  // append input to the edit container
   editContainer.appendChild(preWhiteSpace);
   editContainer.appendChild(input);
   editContainer.appendChild(postWhiteSpace);
@@ -72,7 +72,7 @@ function createPos(word, previewContainer, editContainer) {
   previewContainer.appendChild(preWhiteSpace);
   previewContainer.appendChild(output);
 
-  // synchronizing the input and the output 
+  // synchronizing the input and the output
   input.addEventListener("input", () => {
     if (input.value) {
       output.innerHTML = input.value;
@@ -100,9 +100,8 @@ function renderStoryToDOM(processedStory) {
     }
   });
 
+  // crate enter keypress event to change the focus on the input field
   const inputFields = document.querySelectorAll("input");
-  const outputs = document.querySelectorAll("mark");
-  const clearButton = document.querySelector("#clearBtn");
   inputFields.forEach((input, i) => {
     input.addEventListener("keypress", (e) => {
       if (e.key === "Enter") {
@@ -111,16 +110,19 @@ function renderStoryToDOM(processedStory) {
       }
     });
   });
-  
-  clearButton.addEventListener('click', () => {
-    for(let i=0; i<inputFields.length; i++) {
+
+  // clear button
+  const outputs = document.querySelectorAll("mark");
+  const clearButton = document.querySelector("#clearBtn");
+  clearButton.addEventListener("click", () => {
+    for (let i = 0; i < inputFields.length; i++) {
       inputFields[i].value = "";
       outputs[i].innerText = inputFields[i].placeholder;
       inputFields[i].classList.remove("filled");
       outputs[i].classList.remove("filled");
     }
-  })  
-}   
+  });
+}
 
 getRawStory()
   .then(parseStory)
