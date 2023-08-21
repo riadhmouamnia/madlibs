@@ -206,7 +206,6 @@ mark {
   border-bottom: 1px solid #333;
   outline: none;
   background: none;
-  width: 85px;
   background-color: var(--primary-light);
   margin: 0.1rem 0;
 }
@@ -227,12 +226,13 @@ mark {
 mark {
   color: var(--text-secondary);
 }
-span {
-  margin: 0.1rem 0;
-  font-size: 1rem;
-  font-weight: 300;
+mark {
+  min-width: 10ch;
+  color: var(--text-secondary);
 }
-
+input {
+  width: 10ch;
+}
 .filled {
   background-color: var(--secondary);
   color: white;
